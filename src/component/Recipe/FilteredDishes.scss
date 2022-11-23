@@ -1,0 +1,25 @@
+.filtered-dishes {
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px auto 0px auto;
+    li {
+      background-color: #E99F1D;
+      font-weight: 500;
+      color: white;
+      margin-right: 20px;
+      padding: 12px 30px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      &.active {
+        background-color: black;
+      }
+      &:hover{
+        background-color: black;
+      }
+    }
+  }
+}

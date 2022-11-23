@@ -4,22 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
 }
-
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
-
+ 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(174, 83, 3);
@@ -30,90 +28,72 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(174, 83, 3);
 }
-
 p {
   font-size: 16px;
   line-height: 24px;
 }
-
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .container {
   max-width: 1000px;
   margin: auto;
 }
-
 .section {
   margin: 70px auto;
 }
-
 .text-center {
   text-align: center;
   max-width: 680px;
   margin: auto;
 }
-
 .text-left {
   text-align: left;
 }
-
 .text-right {
   text-align: right;
 }
-
 img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 .flex {
   display: flex;
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+  &.flex-cetner {
+    align-items: center;
+    justify-content: center;
+  }
 }
-.flex.flex-wrap {
-  flex-wrap: wrap;
-}
-.flex.flex-cetner {
-  align-items: center;
-  justify-content: center;
-}
-
 .gap-30 {
   gap: 30px;
 }
-
 h1 {
   font-size: 2.5rem;
   line-height: 134%;
   max-width: 400px;
 }
-
 h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-
 h3 {
   font-size: 1rem;
 }
-
 h4 {
   font-size: 15px;
 }
-
 h5 {
   font-size: 18px;
 }
-
 p {
-  margin-top: 1rem;
+  margin-top:1rem;
   font-size: 14px;
 }
-
 .br-10 {
   border-radius: 10px;
-}/*# sourceMappingURL=App.css.map */
+}

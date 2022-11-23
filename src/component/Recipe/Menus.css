@@ -1,13 +1,6 @@
-.container{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-wrap: wrap;
-}
-.menu img{
-    width: 100%;
-    max-width: 300px;
-    object-fit: cover;
-}
+.menu img {
+  width: 100%;
+  max-width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Menus.css.map */

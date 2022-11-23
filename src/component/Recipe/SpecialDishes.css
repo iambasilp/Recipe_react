@@ -1,0 +1,8 @@
+.special-dishes-content {
+  max-width: 680px;
+  margin: auto;
+}
+.special-dishes-list li {
+  width: 22%;
+  margin: 4rem auto 0rem auto;
+}/*# sourceMappingURL=SpecialDishes.css.map */

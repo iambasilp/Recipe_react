@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  &-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: whitesmoke;
+    max-width: 600px;
+    h1{
+      font-size: 53px;
+      max-width: 500px;
+      color:rgb(231, 231, 231);
+    }
+    p {
+      max-width: 580px;
+      color:rgb(201, 198, 198);
+    }
+    button {
+      width: auto;
+      display: block;
+      margin-top: 1.5rem;
+      padding: 14px 30px;
+      border: none;
+      outline: none;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: all ease 1s;
+      border-radius: 30px;
+      background-color: orangered;
+      &:hover {
+        color: orangered;
+        background-color: white;
+      }
+    }
+  }
+}

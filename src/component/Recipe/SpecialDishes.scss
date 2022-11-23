@@ -1,0 +1,12 @@
+.special-dishes {
+  &-content {
+    max-width: 680px;
+    margin: auto;
+  }
+  &-list {
+    li {
+      width: 22%;
+      margin: 4rem auto 0rem auto;
+    }
+  }
+}
