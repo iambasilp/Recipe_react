@@ -3,10 +3,14 @@ import { useState } from "react";
 import Hero from "./Hero";
 import SpecialDishes from "./SpecialDishes";
 import FilteredDishes from "./FilteredDishes";
-import "./Menus.css";
+import "./Menus.scss";
+import Loader from "./Loader";
+
 export default function Menus() {
   let [menu, setMenu] = useState([]);
-  let [categories, setCategories] = useState([])
+  let [categories, setCategories] = useState([]);
+  let [loading, setLoading] = useState(true);
+
   async function fetchApiAll(url) {
     try {
       const response = await fetch(url);
@@ -38,19 +42,24 @@ export default function Menus() {
   }
   useEffect(() => {
     fetchMeals().then((data) => {
-      return setMenu(data);
+      setMenu(data);
+      setLoading(false);
     });
 
     fetchCategory().then((response) => {
-      return setCategories(response)
+      setCategories(response);
       // console.log(response);
     });
   }, []);
   return (
     <div>
       <Hero />
-      <SpecialDishes specialMenu={menu} />
-      <FilteredDishes menuCategories={categories} specialMenu={menu} />
+      {!loading ? (
+        <SpecialDishes specialMenu={menu} />
+      ) : <Loader/>}
+      {!loading ? (
+        <FilteredDishes menuCategories={categories} specialMenu={menu} />
+      ) : null}
     </div>
   );
 }

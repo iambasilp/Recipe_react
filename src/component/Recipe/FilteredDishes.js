@@ -6,6 +6,7 @@ function FilteredDishes(props) {
   let [allMenu, setAllMenu] = useState(specialMenu);
   console.log(allMenu);
   let [filteredDishes, setFilteredDishes] = useState([]);
+  
 
   //show dishes on click
   function handleShowFilteredDishes(category) {
@@ -17,8 +18,8 @@ function FilteredDishes(props) {
       .map((item) => {
         return (
           <li>
-            <img src={`${item.strMealThumb}`} alt="" />
-            <h4>{item.strMeal}</h4>
+            <img className="br-10" src={`${item.strMealThumb}`} alt="" />
+            <h4 className="text-center">{item.strMeal}</h4>
           </li>
         );
       });
@@ -52,8 +53,8 @@ function FilteredDishes(props) {
         <div className="filtered-dishes">
           <ul>{menuCategoriesData}</ul>
         </div>
-        <div className="filtered-dishes-">
-          <ul className="flex flex-warp gap-30">
+        <div className="filtered-dishes-result">
+          <ul className="flex flex-wrap gap-30">
             {filteredDishes}
           </ul>
         </div>

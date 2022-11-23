@@ -1,6 +1,16 @@
-
+$background-color_1: black;
 .menu img{
     width: 100%;
     max-width: 300px;
     object-fit: cover;
+}
+.loader {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $background-color_1;
 }
