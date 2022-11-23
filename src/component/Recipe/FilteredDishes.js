@@ -4,6 +4,7 @@ import "./FilteredDishes.scss";
 function FilteredDishes(props) {
   let { menuCategories, specialMenu } = props;
   let [allMenu, setAllMenu] = useState(specialMenu);
+  console.log(allMenu);
   let [filteredDishes, setFilteredDishes] = useState([]);
 
   //show dishes on click
