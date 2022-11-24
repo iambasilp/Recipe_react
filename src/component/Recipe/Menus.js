@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-<<<<<<< HEAD
 import Hero from "./Hero";
 import SpecialDishes from "./SpecialDishes";
 import FilteredDishes from "./FilteredDishes";
@@ -78,37 +77,6 @@ export default function Menus() {
       {!loading ? (
         <FilteredDishes menuCategories={categories} specialMenu={menu} singleDish={singleDish} />
       ) : null}
-=======
-import "./Menus.css";
-
-export default function Menus() {
-  let [menu, setMenu] = useState([]);
-  useEffect(() => {
-    async function fetchMeals() {
-      const response = await fetch(
-        "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
-      );
-      let data = await response.json();
-      return data.meals;
-    }
-    fetchMeals().then((data) => {
-      console.log(data);
-      return setMenu(data);
-    });
-  }, []);
-  return (
-    <div className="menu">
-      <div className="container">
-        {menu.map((item) => {
-          return (
-            <div key={item.strMealThumb}>
-              <h3>{item.strMeal}</h3>
-              <img src={`${item.strMealThumb}`} alt="" />
-            </div>
-          );
-        })}
-      </div>
->>>>>>> refs/remotes/origin/main
     </div>
   );
 }
