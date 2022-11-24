@@ -28,9 +28,34 @@
   }
   .filtered-dishes-result{
     overflow: hidden;
-    li{
-      width: 22%;
-      margin: 4rem auto 0rem auto;
+    ul{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      li{
+        width: 22%;
+        margin: 4rem auto 0rem auto;
+      }
     }
   }
+}
+.alert{
+  border: 2px solid red;
+  width: 100%;
+  border-radius: 10px;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.5rem;
+  h2{
+    text-transform: capitalize;
+    color: red;
+  }
+  h4{
+    color: grey;
+    text-transform: capitalize;
+  }
+
 }

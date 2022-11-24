@@ -2,8 +2,8 @@ import React from 'react'
 
 function Loader() {
   return (
-    <div class="loader">
-    <div class="loading-spinner">
+    <div className="loader">
+    <div className="loading-spinner">
       <svg className="loading-spinner__circle-svg" viewBox="25 25 50 50">
         <circle
           className="loading-spinner__circle-stroke"

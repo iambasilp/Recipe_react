@@ -6,14 +6,25 @@ function FilteredDishes(props) {
   let [allMenu, setAllMenu] = useState(specialMenu);
   console.log(allMenu);
   let [filteredDishes, setFilteredDishes] = useState([]);
-  
+  let [activeState, setActiveDish] = useState("Beef");
 
+  // let show only single lists
+  let singleDishItems = props.singleDish.map((item) => {
+    
+    return (
+      <li>
+        <img className="br-10" src={`${item.strMealThumb}`} alt="" />
+        <h4 className="text-center">{item.strMeal}</h4>
+      </li>
+    );
+  });
   //show dishes on click
   function handleShowFilteredDishes(category) {
+    setActiveDish(category);
     // alert(`Please show dishes of ${category}`);
     let filteredDishesare = allMenu
       .filter((item) => {
-        return item.strCategory === category
+        return item.strCategory === category;
       })
       .map((item) => {
         return (
@@ -23,16 +34,17 @@ function FilteredDishes(props) {
           </li>
         );
       });
-      setFilteredDishes(filteredDishesare)
+    setFilteredDishes(filteredDishesare);
   }
   // Lets show all the category
-  let menuCategoriesData = menuCategories.map((item) => {
+  let menuCategoriesData = menuCategories.map((item, index) => {
     return (
       <li
+        key={index}
+        className={item.strCategory == activeState  ? "active" : ""}
         onClick={() => {
           handleShowFilteredDishes(item.strCategory);
         }}
-        key={item.strCategory}
       >
         {item.strCategory}
       </li>
@@ -55,7 +67,15 @@ function FilteredDishes(props) {
         </div>
         <div className="filtered-dishes-result">
           <ul className="flex flex-wrap gap-30">
-            {filteredDishes}
+            {singleDishItems}
+            {filteredDishes.length != 0 ? (
+              filteredDishes
+            ) : (
+              <div className="alert">
+                <h2>Sorry No items Found</h2>
+                <h4>Please choose another dish</h4>
+              </div>
+            )}
           </ul>
         </div>
       </div>
